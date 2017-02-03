@@ -15,6 +15,9 @@ Lan=raw_input('Type your LAN card name from above list >> ')
 x=commands.getoutput('ifconfig  '+ Lan )
 y=x.split('inet')[1]
 ip_address=y.split()[0]
+f=open('myip.txt','w')
+f.write(ip_address)
+f.close()
 
 z='Your IP address of given Lan Card ' + Lan + ' is : ',ip_address
 print z
